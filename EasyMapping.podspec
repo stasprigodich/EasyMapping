@@ -1,14 +1,16 @@
 Pod::Spec.new do |s|
   s.name         = "EasyMapping"
-  s.version      = "0.22.1"
+  s.version      = "0.22.2"
   s.summary      = "The easiest way to map data from your webservice."
-  s.homepage     = "https://github.com/lucasmedeirosleite/EasyMapping"
+  s.homepage     = "https://github.com/stasprigodich/EasyMapping"
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.authors       = { "Lucas Medeiros"  => "lucastoc@gmail.com",
                       "Denys Telezhkin" => "denys.telezhkin.oss@gmail.com" }
-  s.source       = { :git => "https://github.com/lucasmedeirosleite/EasyMapping.git", :tag => s.version.to_s }
+  s.source       = { :git => "https://github.com/stasprigodich/EasyMapping.git", :tag => s.version.to_s }
   s.requires_arc = true
-
+  s.static_framework = true
+  s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }
+  
   s.ios.deployment_target = '8.0'
   s.osx.deployment_target = '10.9'
   s.tvos.deployment_target = '9.0'
